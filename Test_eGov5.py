@@ -12,7 +12,7 @@ def eGovScrapying():
     eGov_Login = 'https://www.cp.gov.tw/portal/Clogin.aspx?ReturnUrl=https%3A%2F%2Felearn.hrd.gov.tw%2Fegov_login.php'
     eGov_Course = "https://elearn.hrd.gov.tw/mooc/user/mycourse.php"
 
-    dirverPath=r"X:\\chromedriver.exe"
+    dirverPath=r"chromedriver.exe"
     browser = webdriver.Chrome(dirverPath)
     browser.get(eGov_Login)
 
@@ -28,8 +28,8 @@ def eGovScrapying():
     eGovAccount.send_keys(Account)
     eGovPassWord.send_keys(PassW)
 
-    loginSubmit = browser.find_element_by_id("ctl00_ContentPlaceHolder1_AccountPassword1_btn_LoginHandler")
-    loginSubmit.click()
+    # loginSubmit = browser.find_element_by_id("ctl00_ContentPlaceHolder1_AccountPassword1_btn_LoginHandler")
+    # loginSubmit.click()
 
     time.sleep(3)
     #讀取個人資料及關掉視窗
